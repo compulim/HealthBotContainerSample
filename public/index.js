@@ -110,12 +110,12 @@ function initBotConversation() {
                                 window.React.createElement(
                                     'a',
                                     {
-                                        'aria-label': 'Powered by Microsoft Azure',
+                                        'aria-label': 'Powered by Microsoft',
                                         href: 'https://aka.ms/powered-ms-azure',
                                         target: '_blank'
                                     },
                                     undefined,
-                                    'Powered by Microsoft Azure'
+                                    'Powered by Microsoft'
                                 )
                             )
                         );
