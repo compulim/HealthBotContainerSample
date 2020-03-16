@@ -6,35 +6,35 @@
     <script src="index.js"></script>
     <link href="stylesheets/style.css" rel="stylesheet" />
     <style type="text/css">
-        .azure-logo {
-            left: 50%;
-            margin-left: -100px;
-            margin-top: -30px;
-            opacity: 20%;
-            position: fixed;
-            top: 25%;
-            width: 200px;
-        }
-
-        .microsoft-brand {
-            background-color: White;
-            font-family: 'Segoe UI Regular', 'Calibri', 'Helvetica Neue', 'Arial', 'sans-serif';
-            font-size: 15px;
+        .microsoftToast {
+            align-items: center;
+            background: White;
+            border-bottom: solid 1px #CCC;
+            display: flex;
             padding: 8px 10px;
         }
 
-        .microsoft-brand a {
+        .microsoftToast--azureLogo {
+            height: 20px;
+        }
+
+        .microsoftToast--filler {
+            flex: 1;
+        }
+
+        .microsoftToast--azureLink {
             color: #5E5E5E;
+            font-family: 'Segoe UI', 'Calibri', 'Helvetica Neue', 'Arial', 'sans-serif';
+            font-size: 15;
             text-decoration: none;
         }
 
-        .microsoft-brand a:hover {
+        .microsoftToast--azureLink:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
-<img class="azure-logo" src="azure.svg" />
 <div id="webchat" role="main"></div>
 <script>requestChatBot();</script>
 </body>

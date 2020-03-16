@@ -61,6 +61,17 @@ function initBotConversation() {
                             }
                         });
 
+                        store.dispatch({
+                            type: 'DIRECT_LINE/POST_ACTIVITY',
+                            meta: {method: 'keyboard'},
+                            payload: {
+                                activity: {
+                                    type: "message",
+                                    text: 'echo Hello, World!'
+                                }
+                            }
+                        });
+
                         // Use the following activity to proactively invoke a bot scenario
                         /*
                         store.dispatch({
@@ -105,12 +116,27 @@ function initBotConversation() {
                             window.React.createElement(
                                 'div',
                                 {
-                                    className: 'microsoft-brand'
+                                    className: 'microsoftToast'
                                 },
+                                window.React.createElement(
+                                    'img',
+                                    {
+                                        'aria-label': 'Microsoft Azure logo',
+                                        className: 'microsoftToast--azureLogo',
+                                        src: 'azure.svg'
+                                    }
+                                ),
+                                window.React.createElement(
+                                    'div',
+                                    {
+                                        className: 'microsoftToast--filler',
+                                    }
+                                ),
                                 window.React.createElement(
                                     'a',
                                     {
                                         'aria-label': 'Powered by Microsoft Azure',
+                                        className: 'microsoftToast--azureLink',
                                         href: 'https://aka.ms/powered-ms-azure',
                                         target: '_blank'
                                     },
